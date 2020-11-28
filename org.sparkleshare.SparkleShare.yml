@@ -105,5 +105,5 @@ modules:
       sources:
           - type: archive
             url: 'https://github.com/hbons/SparkleShare/archive/3.38.tar.gz'
-            sha256: 2439fa35ffe592a0e52c477e206b20e37d4f5d3a46023701b7867417eaf0f4d
+            sha256: 2439fa35ffe592a0e52c477e206b20e37d4f5d3a46023701b7867417eaf0f4d6
       buildsystem: meson
