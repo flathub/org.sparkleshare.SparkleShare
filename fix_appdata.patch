@@ -1,0 +1,49 @@
+From b47498f0a756748c709cd8668c8cf50e8432af49 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Thu, 18 Dec 2025 21:26:03 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+---
+ SparkleShare/Linux/org.sparkleshare.SparkleShare.appdata.xml | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+diff --git a/SparkleShare/Linux/org.sparkleshare.SparkleShare.appdata.xml b/SparkleShare/Linux/org.sparkleshare.SparkleShare.appdata.xml
+index 2742669..82e0baf 100644
+--- a/SparkleShare/Linux/org.sparkleshare.SparkleShare.appdata.xml
++++ b/SparkleShare/Linux/org.sparkleshare.SparkleShare.appdata.xml
+@@ -1,9 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
++<component type="desktop-application">
++    <id>org.sparkleshare.SparkleShare</id>
+     <name>SparkleShare</name>
++    <project_license>GPL-3.0+</project_license>
++    <metadata_license>CC0-1.0</metadata_license>
++    <launchable type="desktop-id">org.sparkleshare.SparkleShare.desktop</launchable>
+     <summary>Magic self hosted Git file sync</summary>
+     <developer_name>Hylke Bons</developer_name>
+-    <project_license>GPL-3.0+</project_license>
+     <url type="homepage">http://www.sparkleshare.org/</url>
+     <url type="bugtracker">https://www.github.com/hbons/SparkleShare/issues</url>
+     
+@@ -62,12 +65,13 @@
+         </screenshot>
+     </screenshots>
+ 
+-    <id type="desktop">org.sparkleshare.SparkleShare.desktop</id>
+-    <launchable id="desktop-id">org.sparkleshare.SparkleShare.desktop</launchable>
+     <provides>
+         <binary>sparkleshare</binary>
++        <id>org.sparkleshare.SparkleShare.desktop</id>
+     </provides>
+-    
+-    <metadata_licence>CC0-1.0</metadata_licence>
++    <replaces>
++        <id>org.sparkleshare.SparkleShare.desktop</id>
++    </replaces>
++    <content_rating type="oars-1.1" />
+     <update_contact>hi_AT_planetpeanut.uk</update_contact>
+ </component>
+--
+libgit2 1.7.2
+
