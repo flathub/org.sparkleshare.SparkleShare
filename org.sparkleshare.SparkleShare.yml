@@ -10,7 +10,7 @@ finish-args:
     - --share=ipc
     - --share=network
     - --socket=wayland
-    - --socket=x11
+    - --socket=fallback-x11
     - --talk-name=org.gtk.vfs.*
     - --filesystem=xdg-run/gvfsd
     - --talk-name=org.freedesktop.Notifications
