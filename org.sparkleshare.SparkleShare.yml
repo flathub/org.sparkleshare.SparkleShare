@@ -11,8 +11,8 @@ finish-args:
     - --share=network
     - --socket=wayland
     - --socket=x11
-    - --talk-name=org.gtk.vfs
     - --talk-name=org.gtk.vfs.*
+    - --filesystem=xdg-run/gvfsd
     - --talk-name=org.freedesktop.Notifications
     - --talk-name=com.canonical.indicator.application
     - --talk-name=org.kde.StatusNotifierWatcher
