@@ -99,9 +99,11 @@ modules:
       no-parallel-make: true
 
     - name: sparkleshare
+      buildsystem: meson
       sources:
           - type: archive
             url: 'https://github.com/hbons/SparkleShare/archive/3.28.tar.gz'
             sha256: a52d6eab102411da5b6c772c8446c8ea95885c1f87de30dab9782011a449222f
-      buildsystem: meson
+          - type: patch
+            path: fix_appdata.patch
 
